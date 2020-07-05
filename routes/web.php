@@ -16,6 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('decretoSupremo','DecretoController@view');
-
+Route::get('universidades/simple','UniversidadesController@simple');
 /*Route::get('universidades','UniversidadesController@index');*/
 Route::resource('universidades','UniversidadesController');
