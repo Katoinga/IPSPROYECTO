@@ -1,10 +1,8 @@
-
 <html>
 <head>
 	<title>UNIVERSIDADES ACREDITADAS</title>
 </head>
 <body>
-
 	<div id="header" class="container">
 		<div id="menu" class="container">
 			<ul>
@@ -28,23 +26,18 @@
 
 				</tr>
         <?php
-        $mysqli = new mysqli('127.0.0.1', 'root', '', 'laravel');
-        $mysqli->set_charset("utf8");
-        $universidades = $mysqli->query("SELECT * FROM universidades");?>
+        if($universidades ?? ''):
+          foreach($universidades ?? '' as $universidad):?>
+		      <tr>
+					       <td><?php echo $universidad->nombre;?></td>
+					       <td><?php echo $universidad->estado_licenciamiento ?></td>
 
-        <?php
-        while($f = $universidades->fetch_object()){?>
-          <tr>
-            <th><?php echo $f->nombre;?></th>
-            <th><?php echo $f->estado_licenciamiento;?></th>
-
-          </tr>
-            <?php
-        }
+		      </tr>
+          <?php
+          endforeach;
+				endif;
         ?>
-
 		</table>
-
 	<div id="copyright" class="container">
 		<h3>Contactanos</h3>
 		<ul>

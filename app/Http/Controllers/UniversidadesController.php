@@ -26,17 +26,13 @@ class UniversidadesController extends Controller
     {
         return view('universidades.nuevo');
     }
-    
+
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function simple()
-    {
-        $universidades = DB::select('SELECT * FROM universidades');
-        return view('universidades.simple');
-    }
+    
     /**
      * Store a newly created resource in storage.
      *
