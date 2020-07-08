@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('chart', 'ChartController@index');
 Route::get('decretoSupremo','DecretoController@view');
 Route::resource('simple','Filtro2Controller');
 /*Route::get('universidades','UniversidadesController@index');*/
