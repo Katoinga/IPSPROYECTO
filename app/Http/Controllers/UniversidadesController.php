@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class UniversidadesController extends Controller
 {
+    public function __construct(){
+      $this->middleware('auth')->only('create');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -32,7 +35,7 @@ class UniversidadesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
+
     /**
      * Store a newly created resource in storage.
      *

@@ -1,3 +1,4 @@
+
 <?php
 
 /*
@@ -19,3 +20,7 @@ Route::get('decretoSupremo','DecretoController@view');
 Route::resource('simple','Filtro2Controller');
 /*Route::get('universidades','UniversidadesController@index');*/
 Route::resource('universidades','UniversidadesController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
