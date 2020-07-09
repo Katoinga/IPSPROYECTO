@@ -10,6 +10,14 @@ class UniversidadesController extends Controller
     public function __construct(){
       $this->middleware('auth')->only('create');
     }
+
+
+    public function simple()
+    {
+      $universidades = DB::select('SELECT nombre, tipo_gestion, estado_licenciamiento, periodo_licenciamiento, departamento, provincia FROM universidades');
+      return view('universidades.simple',['universidades' => $universidades]);
+
+    }
     /**
      * Display a listing of the resource.
      *
@@ -46,7 +54,8 @@ class UniversidadesController extends Controller
     {
       $universidad= request()->except('_token');
       Universidades::insert($universidad);
-      return response()->json($universidad);
+      //return response()->json($universidad);
+      return view('universidades.index');
     }
 
     /**

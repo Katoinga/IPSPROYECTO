@@ -15,9 +15,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('chart', 'ChartController@index');
-Route::get('decretoSupremo','DecretoController@view');
+Route::get('chart', 'ChartController@index')->name('chart');
+Route::get('decretoSupremo','DecretoController@view')->name('decretoSupremo');
 Route::resource('simple','Filtro2Controller');
+Route::get('universidades/simple','UniversidadesController@simple')->name('simple');
 /*Route::get('universidades','UniversidadesController@index');*/
 Route::resource('universidades','UniversidadesController');
 
