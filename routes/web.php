@@ -15,6 +15,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/laravel_google_chart', 'LaravelGoogleGraph@index');
 Route::get('chart', 'ChartController@index')->name('chart');
 Route::get('decretoSupremo','DecretoController@view')->name('decretoSupremo');
 Route::resource('simple','Filtro2Controller');
