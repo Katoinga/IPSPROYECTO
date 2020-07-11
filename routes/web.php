@@ -15,14 +15,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+//Controller de Reportes
 Route::get('/laravel_google_chart', 'LaravelGoogleGraph@index');
 Route::get('chart', 'ChartController@index')->name('chart');
+
+//Controller de Decreto
 Route::get('decretoSupremo','DecretoController@view')->name('decretoSupremo');
-Route::resource('simple','Filtro2Controller');
-Route::get('universidades/simple','UniversidadesController@simple')->name('simple');
-/*Route::get('universidades','UniversidadesController@index');*/
+
+//Controller de Universidades
+Route::get('/universidades/busqueda','UniversidadesController@busqueda')->name('busqueda');
 Route::resource('universidades','UniversidadesController');
 
+//Controller de LoginAndRegister
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');

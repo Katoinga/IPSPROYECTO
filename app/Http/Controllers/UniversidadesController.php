@@ -12,12 +12,19 @@ class UniversidadesController extends Controller
     }
 
 
-    public function simple()
+    public function busqueda()
+    {
+      $universidades = DB::select('SELECT nombre, tipo_gestion, estado_licenciamiento, periodo_licenciamiento, departamento, provincia FROM universidades');
+      return view('universidades.viewMore',['universidades' => $universidades]);
+    }
+
+
+    /*public function simple()
     {
       $universidades = DB::select('SELECT nombre, tipo_gestion, estado_licenciamiento, periodo_licenciamiento, departamento, provincia FROM universidades');
       return view('universidades.simple',['universidades' => $universidades]);
 
-    }
+    }*/
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +32,8 @@ class UniversidadesController extends Controller
      */
     public function index()
     {
-        return view('universidades.index');
+        $universidades = DB::select('SELECT nombre, tipo_gestion, estado_licenciamiento, periodo_licenciamiento, departamento, provincia FROM universidades');
+        return view('universidades.index',['universidades' => $universidades]);
     }
 
     /**

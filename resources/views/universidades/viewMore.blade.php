@@ -22,16 +22,22 @@
 
 				<tr>
 					<th>Universidad</th>
+					<th>Gestion</th>
 					<th>Estado de Licenciamiento</th>
-
+					<th>Periodo de Licenciamiento</th>
+					<th>Departamento</th>
+          <th>Provincia</th>
 				</tr>
         <?php
         if($universidades ?? ''):
           foreach($universidades ?? '' as $universidad):?>
 		      <tr>
 					       <td><?php echo $universidad->nombre;?></td>
+					       <td><?php echo $universidad->tipo_gestion ?></td>
 					       <td><?php echo $universidad->estado_licenciamiento ?></td>
-
+                 <td><?php echo $universidad->periodo_licenciamiento ?></td>
+					       <td><?php echo $universidad->departamento ?></td>
+					       <td><?php echo $universidad->provincia ?></td>
 		      </tr>
           <?php
           endforeach;
