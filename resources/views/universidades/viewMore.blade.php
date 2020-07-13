@@ -18,6 +18,42 @@
 		</div>
 	</div>
 
+	<nav class="navbar">
+	  <a class="navbar-brand">Filtros de Busqueda</a>
+	  <form class="form">
+			<label >Region</label>
+      <select name="queryRegion" id="inputRegion">
+				<option value="">Ninguno</option>
+        <option>Amazonas</option>
+        <option>Ancash</option>
+        <option>Apurimac</option>
+        <option>Arequipa</option>
+        <option>Ayacucho</option>
+        <option>Cajamarca</option>
+        <option>Callao</option>
+        <option>Cusco</option>
+        <option>Huancavelica</option>
+        <option>Huanuco</option>
+        <option>Ica</option>
+        <option>Junín</option>
+        <option>La Libertad</option>
+        <option>Lambayeque</option>
+        <option>Lima</option>
+        <option>Loreto</option>
+        <option>Madre de Dios</option>
+        <option>Moquegua</option>
+        <option>Pasco</option>
+        <option>Piura</option>
+        <option>Puno</option>
+        <option>San Martín</option>
+        <option>Tacna</option>
+        <option>Tumbes</option>
+        <option>Ucayali</option>
+      </select>
+	    <button class="button" type="submit">Aplicar</button>
+	  </form>
+	</nav>
+
   <table class="tabla">
 
 				<tr>

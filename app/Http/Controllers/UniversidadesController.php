@@ -12,8 +12,16 @@ class UniversidadesController extends Controller
     }
 
 
-    public function busqueda()
+    public function busqueda(Request $request)
     {
+      $region = $request->get('queryRegion');
+      $region = strtoupper($region);
+      if (!($region === '')) {
+          $universidades = DB::table('universidades')
+                          ->where('departamento',$region)
+                          ->get();
+          return view('universidades.viewMore',['universidades' => $universidades]);
+      }
       $universidades = DB::select('SELECT nombre, tipo_gestion, estado_licenciamiento, periodo_licenciamiento, departamento, provincia FROM universidades');
       return view('universidades.viewMore',['universidades' => $universidades]);
     }
