@@ -16,7 +16,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 //Controller de Reportes
-Route::get('/laravel_google_chart', 'LaravelGoogleGraph@index');
+Route::get('/reports', 'LaravelGoogleGraph@index');
 Route::get('chart', 'ChartController@index')->name('chart');
 
 //Controller de Decreto
