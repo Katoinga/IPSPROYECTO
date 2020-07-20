@@ -1,0 +1,20 @@
+
+
+#header{
+  background-image: url("Entregable1.jpg");
+  background-repeat: no-repeat;
+  background-size: 1357px auto;
+}
+#copyright h3{
+  font-size: 1.6em;
+	font-weight: 300;
+	color: #9c9c9c;
+}
+#copyright{
+  overflow: hidden;
+	padding: 1em 1em;
+	background: #383838;
+}
+#copyright li{
+	color: #828282;
+}

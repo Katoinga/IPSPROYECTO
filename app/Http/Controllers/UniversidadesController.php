@@ -80,9 +80,12 @@ class UniversidadesController extends Controller
      * @param  \App\Universidades  $universidades
      * @return \Illuminate\Http\Response
      */
-    public function show(Universidades $universidades)
+    public static function show($universidad)
     {
-        //
+      $universidades = DB::table('universidades')
+                      ->where('nombre',$universidad)
+                      ->get();
+      return view('universidades.viewUnique',['universidades' => $universidades]);
     }
 
     /**
