@@ -16,6 +16,7 @@
  </style>
  <script type="text/javascript">
   var analytics = <?php echo $estado_licenciamiento; ?>
+<<<<<<< HEAD
   google.charts.load('current', {'packages':['corechart']});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart()
@@ -48,6 +49,43 @@
 
    </div>
   </div>
+=======
+
+  google.charts.load('current', {'packages':['corechart']});
+
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart()
+  {
+   var data = google.visualization.arrayToDataTable(analytics);
+   var options = {
+    title : 'Porcentaje de universidades licenciadas'
+   };
+   var chart = new google.visualization.PieChart(document.getElementById('pie_chart'));
+   chart.draw(data, options);
+  }
+ </script>
+</head>
+
+<div id="banner" class="container">
+  <div class="title">
+    <h2>Reportes</h2>
+  </div>
+</div>
+
+<div class="container">
+ <h3 align="center"> Reportes</h3><br />
+
+ <div class="panel panel-default">
+  <div class="panel-heading">
+   <h3 class="panel-title">Porcentaje de universidades licenciadas</h3>
+  </div>
+  <div class="panel-body" align="center">
+   <div id="pie_chart" style="width:750px; height:450px;">
+
+   </div>
+  </div>
+>>>>>>> 56e532e42882d13932827c58f019b53065b98e4f
  </div>
 
 </div>
