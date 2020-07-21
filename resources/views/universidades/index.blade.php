@@ -1,11 +1,16 @@
 @extends('plantilla')
 		@extends('plantilla')
-		@section('content')
+		@section ('contentHead')
 		<div id="banner" class="container">
 			<div class="title">
-				<h2>UNIVERSIDADES ACREDITADAS</h2>
-			</div>
+				<center>
+				<FONT FACE="sans-serif" SIZE=15 COLOR="#d6d6d6" >
+				 Universidades Acreditadas</FONT>	</center>		</div>
 		</div>
+		@endsection
+		@section('content')
+
+
 		<div class="container">
 		<div class="container">
 

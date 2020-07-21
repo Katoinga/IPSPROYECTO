@@ -1,4 +1,15 @@
 @extends('plantilla')
+@section ('contentHead')
+<div id="banner" class="container">
+  <div class="title">
+    <center>
+    <FONT FACE="sans-serif" SIZE=15 COLOR="#d6d6d6" >
+     Reportes</FONT>
+
+   </center>		</div>
+</div>
+
+@endsection
 @section('content')
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -16,7 +27,7 @@
  </style>
  <script type="text/javascript">
   var analytics = <?php echo $estado_licenciamiento; ?>
-<<<<<<< HEAD
+
   google.charts.load('current', {'packages':['corechart']});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart()
@@ -28,6 +39,24 @@
    var chart = new google.visualization.PieChart(document.getElementById('pie_chart'));
    chart.draw(data, options);
   }
+ </script>
+</head>
+
+
+
+<div class="container">
+ <h3 align="center"> Reportes</h3><br />
+
+ <div class="panel panel-default">
+  <div class="panel-heading">
+   <h3 class="panel-title">Porcentaje de universidades licenciadas</h3>
+  </div>
+  <div class="panel-body" align="center">
+   <div id="pie_chart" style="width:750px; height:450px;">
+
+   </div>
+  </div>
+
  </script>
 </head>
 
@@ -49,43 +78,6 @@
 
    </div>
   </div>
-=======
-
-  google.charts.load('current', {'packages':['corechart']});
-
-  google.charts.setOnLoadCallback(drawChart);
-
-  function drawChart()
-  {
-   var data = google.visualization.arrayToDataTable(analytics);
-   var options = {
-    title : 'Porcentaje de universidades licenciadas'
-   };
-   var chart = new google.visualization.PieChart(document.getElementById('pie_chart'));
-   chart.draw(data, options);
-  }
- </script>
-</head>
-
-<div id="banner" class="container">
-  <div class="title">
-    <h2>Reportes</h2>
-  </div>
-</div>
-
-<div class="container">
- <h3 align="center"> Reportes</h3><br />
-
- <div class="panel panel-default">
-  <div class="panel-heading">
-   <h3 class="panel-title">Porcentaje de universidades licenciadas</h3>
-  </div>
-  <div class="panel-body" align="center">
-   <div id="pie_chart" style="width:750px; height:450px;">
-
-   </div>
-  </div>
->>>>>>> 56e532e42882d13932827c58f019b53065b98e4f
  </div>
 
 </div>

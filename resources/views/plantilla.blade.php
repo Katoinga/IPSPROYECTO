@@ -15,10 +15,13 @@
 		<div id="menu" class="container">
 			<ul>
         <br>
-				<a href="universidades" class="btn btn-secondary" role="button">Universidades</a>
-        <a href="reports" class="btn btn-secondary" role="button">Reportes</a>
+				<center>
+				<a href="universidades" class="btn btn-secondary mr-4" role="button">Universidades</a>
+        <a href="reports" class="btn btn-secondary mr-4" role="button">Reportes</a>
         <a href="decretoSupremo" class="btn btn-secondary" role="button">Decreto</a>
-        <br>
+			</center>
+				<br>
+				@yield('contentHead')
 <br>
     	</ul>
 		</div>
