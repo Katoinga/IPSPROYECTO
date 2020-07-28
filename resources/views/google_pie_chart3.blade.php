@@ -26,7 +26,7 @@
   }
  </style>
  <script type="text/javascript">
-  var analytics = <?php echo $estado_licenciamiento; ?>
+  var analytics = <?php echo $tipo_gestion; ?>
 
   google.charts.load('current', {'packages':['corechart']});
   google.charts.setOnLoadCallback(drawChart);
@@ -43,6 +43,7 @@
 </head>
 
 
+
 <div class="container">
  <h3 align="center"> Reportes</h3><br />
  <center>
@@ -53,9 +54,6 @@
     <a href="/reportes3" class="btn btn-secondary " role="button">Publico/Privado</a>
   </div>
 </center>
-
-
-
  <div class="panel panel-default">
   <div class="panel-heading">
    <h3 class="panel-title">Porcentaje de universidades licenciadas</h3>
@@ -74,6 +72,6 @@
     <h2>Reportes</h2>
   </div>
 </div>
-</div>
-</div>
+
+
 @endsection
