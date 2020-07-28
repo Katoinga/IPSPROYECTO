@@ -6,10 +6,23 @@
 			</div>
 		</div>
 	</div>
+	<center>
+
+	<div class = "col-md-4">
+		<form action="/universidades/busqueda/search" method="get">
+			<div class="input-group">
+				<input type="search" name="querySearch" class="form-control">
+				<span class="input-group-prepend">
+					<button  type="submit" class="btn btn-secondary"> Search</button>
+				</span>
+			</div>
+		</form>
+	</div>
+</center>
 	<div class="container">
 		<nav class="navbar navbar-light bg-light">
 		  <a class="navbar-brand">Filtros de Busqueda</a>
-			<form class="form-inline">
+			<form class="form-inline" action="/universidades/busqueda" method="get">
 			  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Región</label>
 				<select class="custom-select my-1 mr-sm-2" name="queryRegion" id="inputRegion">
 			    <option value="">Ninguno</option>

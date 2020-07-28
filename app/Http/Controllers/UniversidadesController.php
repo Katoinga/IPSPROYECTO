@@ -22,15 +22,32 @@ class UniversidadesController extends Controller
                           ->get();
           return view('universidades.viewMore',['universidades' => $universidades]);
       }
+
       $universidades = DB::select('SELECT nombre, tipo_gestion, estado_licenciamiento, periodo_licenciamiento, departamento, provincia FROM universidades');
       return view('universidades.viewMore',['universidades' => $universidades]);
     }
+    public function search(Request $request){
+      $search = $request->get('querySearch');
+      $search = strtoupper($search);
+      if (!($search === '')) {
+          $universidades = DB::table('universidades')
+                          ->where('nombre','like','%'.$search.'%')
+                          ->get();
+          return view('universidades.viewMore',['universidades' => $universidades]);
+      }
+      $universidades = DB::select('SELECT nombre, tipo_gestion, estado_licenciamiento, periodo_licenciamiento, departamento, provincia FROM universidades');
+      return view('universidades.viewMore',['universidades' => $universidades]);
 
+    }
 
     /*public function simple()
     {
       $universidades = DB::select('SELECT nombre, tipo_gestion, estado_licenciamiento, periodo_licenciamiento, departamento, provincia FROM universidades');
       return view('universidades.simple',['universidades' => $universidades]);
+
+
+'like','%'.$busq.'%'
+
 
     }*/
     /**
