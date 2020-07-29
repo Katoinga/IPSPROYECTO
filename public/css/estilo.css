@@ -1,13 +1,83 @@
+*{
+  font-family: 'Open Sans Regular', arial;
+}
+.menu{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 8%;
+}
+.buscar{
+  padding-top: 0px;
+  padding-bottom: 8%;
+}
+.inputBuscar{
 
+  padding: 21px;
+  margin-left: 35%;
+  width: 65%;
+  height: 66%;
+  background-color: #eee;
+  border-radius: 6px;
+  border: 1px solid #000;
+
+}
+.titulo{
+  font-family: 'Open Sans Bold', arial;
+  font-size: 35px;
+  color: #eee;
+  text-align: center;
+  padding-top: 3%;
+  padding-right: 18%;
+  padding-left: 18%;
+  padding-bottom: 2%;
+}
+.subtitulo{
+  font-family: 'Open Sans Regular', arial;
+  font-size: 16px;
+  color: #c0c0c0;
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-bottom: 10%;
+  text-align: center;
+
+}
+
+.boton{
+  font-family: 'Open Sans Bold', arial;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  font-weight: 600;
+  display: inline-block;
+  width: 140px;
+  font-size: 15px;
+  color: #000;
+  background-color: #eee;
+  border-radius: 6px;
+  border: 1px solid #000;
+}
+.boton:hover{
+    color: #eee;
+    border: 2px solid #6c757d;
+    background-color: #6c757d;
+    text-decoration: none;
+}
+
+#principal {
+  font-weight: bolder;
+}
 #header{
-  background-image: url("Entregable1.jpg");
+
+  background-image: url("../img/fondo.jpg");
   background-repeat: no-repeat;
-  background-size: 1357px auto;
+  background-size: 100% ;
+  margin-bottom: 0px;
+
 }
 #copyright h3{
   font-size: 1.6em;
 	font-weight: 300;
-	color: #9c9c9c;
+	color: #eee;
 }
 #copyright{
   overflow: hidden;
@@ -15,19 +85,9 @@
 	background: #383838;
 }
 #copyright li{
-	color: #828282;
+	color: #eee;
 =======
 header{
-  background-image: url(Entregable1.JPG);
+  background-image: url(../fondo.jpg);
 >>>>>>> 56e532e42882d13932827c58f019b53065b98e4f
-}
-.block {
-  display: block;
-  width: 100%;
-  border: none;
-  background-color: #4CAF50;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
 }

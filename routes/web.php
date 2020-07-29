@@ -11,9 +11,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Controller Pagina Principal
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 //Controller de Reportes
 Route::get('/reportes', 'LaravelGoogleGraph@index');

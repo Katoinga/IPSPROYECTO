@@ -3,7 +3,7 @@
 	<title>UNIVERSIDADES ACREDITADAS</title>
 
 	<link rel="stylesheet" href="{{ asset('css/estilo.css') }}" />
-
+	<link href="https://allfont.es/allfont.css?fonts=open-sans-bold" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -12,19 +12,15 @@
 </head>
 <body>
 	<div id="header" class="container">
-		<div id="menu" class="container">
 			<ul>
-        <br>
-				<center>
-				<a href="universidades" class="btn btn-secondary mr-4" role="button">Universidades</a>
-        <a href="reports" class="btn btn-secondary mr-4" role="button">Reportes</a>
-        <a href="decretoSupremo" class="btn btn-secondary" role="button">Decreto</a>
-			</center>
-				<br>
+				<div class="menu">
+					<a href={{ url('universidades') }} class="boton" role="button">UNIVERSIDADES</a>
+		      <a href={{ url('reportes3') }} class="boton" role="button">REPORTES</a>
+		      <a href={{ url('decretoSupremo') }} class="boton" >DECRETO</a>
+				</div>
+			</ul>
 				@yield('contentHead')
-<br>
-    	</ul>
-		</div>
+			<br>
 	</div>
   @yield('content')
 
