@@ -45,17 +45,18 @@
 
 
 <div class="container">
- <h3 align="center"> Reportes</h3><br />
+ <br />
  <center>
 
   <div class="btn-group btn-group-justified">
-    <a href="/reportes" class="btn btn-secondary" role="button">Universidades licenciadas</a>
-    <a href="/reportes2" class="btn btn-secondary " role="button">Regiones</a>
-    <a href="/reportes3" class="btn btn-secondary " role="button">Publico/Privado</a>
+    <a href="/reportes"  class="boton" role="button">Universidades licenciadas</a>
+    <a href="/reportes2" class="boton" role="button">Regiones</a>
+    <a href="/reportes3" class="boton  active" role="button">Publico/Privado</a>
   </div>
 </center>
  <div class="panel panel-default">
   <div class="panel-heading">
+        <br />
    <h3 class="panel-title">Porcentaje de universidades licenciadas</h3>
   </div>
   <div class="panel-body" align="center">
@@ -67,11 +68,6 @@
  </script>
 </head>
 
-<div id="banner" class="container">
-  <div class="title">
-    <h2>Reportes</h2>
-  </div>
-</div>
 
 
 @endsection

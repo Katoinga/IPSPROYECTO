@@ -15,7 +15,7 @@
 			<ul>
 				<div class="menu">
 					<a href={{ url('universidades') }} class="boton" role="button">UNIVERSIDADES</a>
-		      <a href={{ url('reportes3') }} class="boton" role="button">REPORTES</a>
+		      <a href={{ url('reportes') }} class="boton" role="button">REPORTES</a>
 		      <a href={{ url('decretoSupremo') }} class="boton" >DECRETO</a>
 				</div>
 			</ul>
