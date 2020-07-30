@@ -64,7 +64,12 @@
     background-color: #6c757d;
     text-decoration: none;
 }
-
+.active {
+  color: #eee;
+  border: 2px solid #6c757d;
+  background-color: #6c757d;
+  text-decoration: none;
+}
 #principal {
   font-weight: bolder;
 }
