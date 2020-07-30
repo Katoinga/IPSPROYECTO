@@ -1,28 +1,45 @@
 @extends('plantilla')
-		@section('content')
-		<div id="banner" class="container">
-			<div class="title">
-				<h2>UNIVERSIDADES ACREDITADAS</h2>
-			</div>
-		</div>
-	</div>
-	<center>
+@section('contentHead')
 
-	<div class = "col-md-4">
+<div class="container">
+  <div class="titulo">
+    Universidades
+  </div>
+  <div class="buscar">
 		<form action={{ url('universidades/busqueda/search') }} method="get">
-			<div class="input-group">
-				<input type="search" name="querySearch" class="form-control">
-				<span class="input-group-prepend">
-					<button  type="submit" class="btn btn-secondary"> Search</button>
-				</span>
-			</div>
+	    <div class="row">
+	      <div class="col-8">
+	        <input class="inputBuscar" type="search" name="querySearch" placeholder="Busca una universidad">
+	      </div>
+	      <div class="col-4">
+	        <input type="submit" value="Enviar" class="boton">
+	      </div>
+	    </div>
 		</form>
-	</div>
-</center>
-	<div class="container">
+  </div>
+</div>
+
+@endsection
+@section('content')
+
+	<div class="container" style="padding-top:20px; background-color:#eee" >
 		<nav class="navbar navbar-light bg-light">
 		  <a class="navbar-brand">Filtros de Busqueda</a>
 			<form class="form-inline" method="get" action= {{ url('universidades/busqueda') }}>
+				<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tipo de gestion</label>
+				<select class="custom-select my-1 mr-sm-2" name="queryGestion" id="inputGestion">
+			    <option value="">Ninguno</option>
+					<option>Público</option>
+					<option>Privado</option>
+			  </select>
+				<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Licenciamiento</label>
+				<select class="custom-select my-1 mr-sm-2" name="queryLic" id="inputLic">
+			    <option value="">Ninguno</option>
+					<option>Revision</option>
+					<option>Otorgada</option>
+					<option>Denegada</option>
+					<option value="Observ">Observacion</option>
+			  </select>
 			  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Región</label>
 				<select class="custom-select my-1 mr-sm-2" name="queryRegion" id="inputRegion">
 			    <option value="">Ninguno</option>
@@ -52,6 +69,7 @@
 					<option>Tumbes</option>
 					<option>Ucayali</option>
 			  </select>
+
 				<button class="btn btn-outline-dark" type="submit">Aplicar</button>
 			</form>
 		</nav>
@@ -80,7 +98,14 @@
                  <td><?php echo $universidad->periodo_licenciamiento ?></td>
 					       <td><?php echo $universidad->departamento ?></td>
 					       <td><?php echo $universidad->provincia ?></td>
-								 <td>	<li><a href="ver/<?php echo $universidad->nombre ?>">Ver mas</a></li>
+								 <td>
+									 <a class="botonView" href={{ url('universidades/ver') echo $universidad->nombre }}>
+										 <svg width="27px" height="25px" viewBox="0 0 16 16" style="margin-left:15px" class="bi bi-eye" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z"/>
+											<path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+										</svg>
+									</a>
+								</td>
 		      </tr>
           <?php
           endforeach;
