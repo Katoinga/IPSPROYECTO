@@ -14,7 +14,7 @@
 	<div id="header" class="container">
 			<ul>
 				<div class="menu">
-					<a href={{ url('/') }} class="boton" role="button">HOME</a>
+					<a href={{ url('/') }} class="boton" role="button">INICIO</a>
 					<a href={{ url('universidades') }} class="boton" role="button">UNIVERSIDADES</a>
 		      <a href={{ url('reportes') }} class="boton" role="button">REPORTES</a>
 		      <a href={{ url('decretoSupremo') }} class="boton" >DECRETO</a>

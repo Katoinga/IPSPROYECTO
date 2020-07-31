@@ -1,12 +1,17 @@
 @extends('plantilla')
+@section('contentHead')
+
+<div id="banner" class="container">
+	<div class="titulo_U">
+		<?php foreach($universidades as $universidad) {
+					echo $universidad->nombre;
+		}?>
+	</div>
+</div>
+
+@endsection
 		@section('content')
-		<div id="banner" class="container">
-			<div class="title">
-				<h2><?php foreach($universidades as $universidad) {
-              echo $universidad->nombre;
-        }?></h2>
-			</div>
-		</div>
+
 	</div>
 	<div class="container"  id="lista">
 		<table class="table table-striped">
