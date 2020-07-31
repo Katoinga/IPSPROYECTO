@@ -12,7 +12,9 @@
 @endsection
 @section('content')
 
-<center>
-<embed src="Ley-universitaria-30220.pdf#toolbar=1&navpanes=0&scrollbar=0" type="application/pdf" width="60%" height="600px" />
-</center>
+<div class="container decreto center ">
+  <embed src="Ley-universitaria-30220.pdf#toolbar=1&navpanes=0&scrollbar=0" class="decreto" type="application/pdf" width="90%" height="600px" />
+</div>
+
+
 @endsection

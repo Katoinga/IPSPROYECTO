@@ -57,7 +57,7 @@ class UniversidadesController extends Controller
      */
     public function index()
     {
-        $universidades = DB::select('SELECT nombre, tipo_gestion, estado_licenciamiento, periodo_licenciamiento, departamento, provincia FROM universidades');
+        $universidades = DB::select('SELECT id,nombre, tipo_gestion, estado_licenciamiento, periodo_licenciamiento, departamento, provincia FROM universidades');
         return view('universidades.index',['universidades' => $universidades]);
     }
 
@@ -100,7 +100,7 @@ class UniversidadesController extends Controller
     public static function show($universidad)
     {
       $universidades = DB::table('universidades')
-                      ->where('nombre',$universidad)
+                      ->where('id',$universidad)
                       ->get();
       return view('universidades.viewUnique',['universidades' => $universidades]);
     }

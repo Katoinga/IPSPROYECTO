@@ -1,12 +1,13 @@
 @extends('plantilla')
 @section ('contentHead')
-<div id="banner" class="container">
-  <div class="title">
-    <center>
-    <FONT FACE="sans-serif" SIZE=15 COLOR="#d6d6d6" >
-     Reportes</FONT>
 
-   </center>		</div>
+<div id="banner" class="container">
+  <div class="titulo">
+       Reportes
+  </div>
+  <div class="subtitulo">
+    Reportes de universidades en el peru por Estado de Licenciamiento, Regiones y Tipo de Gestion
+  </div>
 </div>
 
 @endsection
@@ -44,16 +45,21 @@
 
 
 
-<div class="container">
+<div class="container" style="background-color:#FBFCFC;">
  <br />
- <center>
-
-  <div class="btn-group btn-group-justified">
-    <a href="/reportes"  class="boton" role="button">Universidades licenciadas</a>
-    <a href="/reportes2" class="boton" role="button">Regiones</a>
-    <a href="/reportes3" class="boton  active" role="button">Publico/Privado</a>
-  </div>
-</center>
+ <div class="container">
+   <ul class="nav nav-tabs">
+     <li class="nav-item">
+       <a class="nav-link  botonView" href={{ url('reportes')}}>Univ. Licenciadas</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link  botonView" href={{ url('reportes2')}}>Regiones</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link active botonView" href={{ url('reportes3')}}>Publico/Privado</a>
+     </li>
+   </ul>
+ </div>
  <div class="panel panel-default">
   <div class="panel-heading">
         <br />

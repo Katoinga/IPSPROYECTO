@@ -6,14 +6,16 @@
   </div>
   <p class="subtitulo">Base de datos alimentada de datos oficiales del SUNEDU.</p>
   <div class="buscar">
-    <div class="row">
-      <div class="col-8">
-        <input class="inputBuscar" type="text" name="buscar" placeholder="Busca una universidad">
-      </div>
-      <div class="col-4">
-        <input type="submit" value="Enviar" class="boton">
-      </div>
-    </div>
+		<form action={{ url('universidades/busqueda/search') }} method="get">
+	    <div class="row">
+	      <div class="col-8">
+	        <input class="inputBuscar" type="search" name="querySearch" placeholder="Busca una universidad">
+	      </div>
+	      <div class="col-4">
+	        <input type="submit" value="Enviar" class="boton">
+	      </div>
+	    </div>
+		</form>
   </div>
 </div>
 @endsection
@@ -29,8 +31,9 @@
             <p class="card-text">Fue acreditada en el año 2017 </p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-
+                <a class="btn btn-sm btn-outline-secondary " href={{ url('universidades/ver/16') }}>
+                  Ver
+                </a>
               </div>
 
             </div>
@@ -42,10 +45,12 @@
           <img src="img/Catolica.jpg" width="100%" height="225" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail" alt="">
           <div class="card-body">
             <h3 class="car-text">Universidad Catolica de Santa Maria</h3>
-            <p class="card-text">Fue acreditada en el año 2018 </p>
+            <p class="card-text">Fue acreditada en el año 2018</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                <a class="btn btn-sm btn-outline-secondary " href={{ url('universidades/ver/115') }}>
+                  Ver
+                </a>
 
               </div>
 

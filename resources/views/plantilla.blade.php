@@ -14,6 +14,7 @@
 	<div id="header" class="container">
 			<ul>
 				<div class="menu">
+					<a href={{ url('/') }} class="boton" role="button">HOME</a>
 					<a href={{ url('universidades') }} class="boton" role="button">UNIVERSIDADES</a>
 		      <a href={{ url('reportes') }} class="boton" role="button">REPORTES</a>
 		      <a href={{ url('decretoSupremo') }} class="boton" >DECRETO</a>
@@ -31,7 +32,6 @@
 			<li>ssonccoc@unsa.edu.pe
 			<li>evaldiviaci@unsa.edu.pe
 			<li>mcarpioco@unsa.edu.pe
-			<li>fbarrientos@unsa.edu.pe
 		</ul>
 	</div>
 
