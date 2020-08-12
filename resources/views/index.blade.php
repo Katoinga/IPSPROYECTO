@@ -31,7 +31,7 @@
             <p class="card-text">Fue acreditada en el año 2017 </p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <a class="btn btn-sm btn-outline-secondary " href={{ url('universidades/ver/16') }}>
+                <a class="btn btn-sm btn-outline-secondary " href={{ url('universidades/ver/302') }}>
                   Ver
                 </a>
               </div>
@@ -48,7 +48,7 @@
             <p class="card-text">Fue acreditada en el año 2018</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <a class="btn btn-sm btn-outline-secondary " href={{ url('universidades/ver/115') }}>
+                <a class="btn btn-sm btn-outline-secondary " href={{ url('universidades/ver/401') }}>
                   Ver
                 </a>
 
